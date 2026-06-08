@@ -167,7 +167,7 @@
             <div class="user-badge" id="userBadge" onclick="logout()"><div class="user-avatar" id="userAvatar">T</div><span class="user-name" id="userNameDisplay">Пользователь</span></div>
         </div>
     </header>
-    <div class="page active" id="page-home">
+      <div class="page active" id="page-home">
         <section class="hero">
             <div class="container">
                 <div class="hero-badge"><span class="dot"></span> Более 300 активных пользователей</div>
@@ -287,4 +287,5 @@
             var password = document.getElementById('authPassword').value;
             var name = isRegMode ? document.getElementById('regName').value.trim() : '';
             if (!email || !password) { document.getElementById('authError').textContent = 'Заполни все поля'; document.getElementById('authError').style.display = 'block'; return false; }
-            if (isRegMode && !name) { document.getElementById
+            if (isRegMode && !name) { document.getElementById('authError').textContent = 'Введи имя'; document.getElementById('authError').style.display = 'block'; return false; }
+            if (password.length < 6) { document.getElementById
