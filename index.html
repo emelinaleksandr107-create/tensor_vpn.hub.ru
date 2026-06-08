@@ -18,13 +18,11 @@
             --gradient: linear-gradient(135deg, #8b5cf6, #6366f1);
             --gradient-card: linear-gradient(180deg, #1a1a2e 0%, #12121d 100%);
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
             background: var(--bg);
@@ -33,7 +31,6 @@
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
-
         .bg-glow {
             position: fixed;
             border-radius: 50%;
@@ -65,7 +62,6 @@
             transform: translate(-50%, -50%);
             opacity: 0.06;
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -73,7 +69,6 @@
             position: relative;
             z-index: 1;
         }
-
         header {
             padding: 20px 0;
             position: sticky;
@@ -167,6 +162,11 @@
             font-size: 16px;
             border-radius: 14px;
         }
+        .btn-sm {
+            padding: 6px 14px;
+            font-size: 13px;
+            border-radius: 8px;
+        }
         .user-badge {
             display: none;
             align-items: center;
@@ -197,14 +197,12 @@
             font-weight: 600;
             font-size: 14px;
         }
-
         .page {
             display: none;
         }
         .page.active {
             display: block;
         }
-
         .hero {
             padding: 80px 0 60px;
             text-align: center;
@@ -264,7 +262,6 @@
             justify-content: center;
             flex-wrap: wrap;
         }
-
         .features {
             padding: 60px 0;
         }
@@ -335,7 +332,6 @@
             font-size: 14px;
             color: var(--text-muted);
         }
-
         .pricing {
             padding: 60px 0;
         }
@@ -424,7 +420,6 @@
             width: 100%;
             justify-content: center;
         }
-
         .compare {
             padding: 60px 0;
         }
@@ -464,7 +459,6 @@
             color: #ef4444;
             font-weight: 700;
         }
-
         .news {
             padding: 60px 0;
             min-height: 60vh;
@@ -512,8 +506,6 @@
             font-weight: 600;
             margin-top: 12px;
         }
-
-        /* Auth Modal */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -605,7 +597,6 @@
             margin-top: 4px;
             display: none;
         }
-
         .cta {
             padding: 80px 0;
             text-align: center;
@@ -647,7 +638,6 @@
             position: relative;
             z-index: 1;
         }
-
         footer {
             border-top: 1px solid var(--border);
             padding: 40px 0;
@@ -659,7 +649,6 @@
             color: var(--primary-glow);
             text-decoration: none;
         }
-
         @media (max-width: 768px) {
             .nav-links {
                 gap: 14px;
@@ -746,53 +735,26 @@
     <div class="page active" id="page-home">
         <section class="hero">
             <div class="container">
-                <div class="hero-badge">
-                    <span class="dot"></span> Более 300 активных пользователей
-                </div>
+                <div class="hero-badge"><span class="dot"></span> Более 300 активных пользователей</div>
                 <h1>Загрузи свободу<br>с Tensor VPN</h1>
                 <p>Быстрый, анонимный и недорогой VPN для молодёжи. YouTube, Telegram, TikTok и другие сервисы, заблокированные в России — без лагов, рекламы и слежки.</p>
                 <div class="hero-buttons">
                     <a class="btn btn-primary btn-lg" onclick="navigateTo('pricing')">⚡ Выбрать тариф</a>
-                    <a class="btn btn-outline btn-lg" onclick="navigateTo('home')">Узнать больше ↓</a>
+                    <a class="btn btn-outline btn-lg" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">Узнать больше ↓</a>
                 </div>
             </div>
         </section>
-
         <section class="features" id="features">
             <div class="container">
                 <div class="section-label">Почему Tensor</div>
                 <div class="section-title">Ни рекламы. Ни логов.<br>Ни тормозов.</div>
                 <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🔒</div>
-                        <h3>No Logs Policy</h3>
-                        <p>Мы не храним логи. Вообще. Ни строчки. Твой трафик — только твой.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">⚡</div>
-                        <h3>Скорость без границ</h3>
-                        <p>Серверы в Москве и Санкт-Петербурге. Минимальный пинг, никаких лагов.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🛡️</div>
-                        <h3>Современное шифрование</h3>
-                        <p>WireGuard и VLESS протоколы. Твой интернет под надёжной защитой.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📱</div>
-                        <h3>Все устройства</h3>
-                        <p>iOS, Android, Windows, macOS. До 5 устройств на Pro-тарифе.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🌍</div>
-                        <h3>Доступ к заблокированным сервисам</h3>
-                        <p>YouTube, Telegram, TikTok и другие сервисы, заблокированные в России — открываются в один клик.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">👥</div>
-                        <h3>Приведи друга</h3>
-                        <p>Реферальная программа: друг регистрируется — ты получаешь 30 минут Pro бесплатно.</p>
-                    </div>
+                    <div class="feature-card"><div class="feature-icon">🔒</div><h3>No Logs Policy</h3><p>Мы не храним логи. Вообще. Ни строчки. Твой трафик — только твой.</p></div>
+                    <div class="feature-card"><div class="feature-icon">⚡</div><h3>Скорость без границ</h3><p>Серверы в Москве и Санкт-Петербурге. Минимальный пинг, никаких лагов.</p></div>
+                    <div class="feature-card"><div class="feature-icon">🛡️</div><h3>Современное шифрование</h3><p>WireGuard и VLESS протоколы. Твой интернет под надёжной защитой.</p></div>
+                    <div class="feature-card"><div class="feature-icon">📱</div><h3>Все устройства</h3><p>iOS, Android, Windows, macOS. До 5 устройств на Pro-тарифе.</p></div>
+                    <div class="feature-card"><div class="feature-icon">🌍</div><h3>Доступ к заблокированным сервисам</h3><p>YouTube, Telegram, TikTok и другие сервисы, заблокированные в России — открываются в один клик.</p></div>
+                    <div class="feature-card"><div class="feature-icon">👥</div><h3>Приведи друга</h3><p>Реферальная программа: друг регистрируется — ты получаешь 30 минут Pro бесплатно.</p></div>
                 </div>
             </div>
         </section>
@@ -805,42 +767,12 @@
                 <div class="section-label">Новости</div>
                 <div class="section-title">Что нового в Tensor VPN</div>
                 <div class="news-grid">
-                    <div class="news-card">
-                        <div class="news-date">08.06.2026</div>
-                        <h3>Запуск новых серверов в Москве</h3>
-                        <p>Добавили два новых сервера в дата-центре М1. Пинг снизился на 40%, скорость выросла до 1 Гбит/с.</p>
-                        <span class="news-tag">Серверы</span>
-                    </div>
-                    <div class="news-card">
-                        <div class="news-date">05.06.2026</div>
-                        <h3>ChatGPT снова доступен на Pro-тарифе</h3>
-                        <p>Мы обновили протоколы обхода. ChatGPT, Claude и другие нейросети работают стабильно без перебоев.</p>
-                        <span class="news-tag">Нейросети</span>
-                    </div>
-                    <div class="news-card">
-                        <div class="news-date">01.06.2026</div>
-                        <h3>Tensor VPN теперь на Android TV</h3>
-                        <p>Выпустили приложение для телевизоров. Смотри YouTube на большом экране без танцев с бубном.</p>
-                        <span class="news-tag">Релиз</span>
-                    </div>
-                    <div class="news-card">
-                        <div class="news-date">28.05.2026</div>
-                        <h3>Обновление протокола WireGuard</h3>
-                        <p>Перешли на новую версию WireGuard. Шифрование стало ещё быстрее, а расход батареи на телефоне снизился на 15%.</p>
-                        <span class="news-tag">Технологии</span>
-                    </div>
-                    <div class="news-card">
-                        <div class="news-date">20.05.2026</div>
-                        <h3>Реферальная программа: первые 100 участников</h3>
-                        <p>Запустили рефералку — уже 100 человек получили бесплатные минуты Pro за приглашённых друзей. Присоединяйся!</p>
-                        <span class="news-tag">Акции</span>
-                    </div>
-                    <div class="news-card">
-                        <div class="news-date">15.05.2026</div>
-                        <h3>Tensor VPN на Хабре: статья про No Logs</h3>
-                        <p>Написали подробный разбор, почему мы не храним логи и как это проверено технически. Читайте на Хабре.</p>
-                        <span class="news-tag">СМИ</span>
-                    </div>
+                    <div class="news-card"><div class="news-date">08.06.2026</div><h3>Запуск новых серверов в Москве</h3><p>Добавили два новых сервера в дата-центре М1. Пинг снизился на 40%, скорость выросла до 1 Гбит/с.</p><span class="news-tag">Серверы</span></div>
+                    <div class="news-card"><div class="news-date">05.06.2026</div><h3>ChatGPT снова доступен на Pro-тарифе</h3><p>Мы обновили протоколы обхода. ChatGPT, Claude и другие нейросети работают стабильно без перебоев.</p><span class="news-tag">Нейросети</span></div>
+                    <div class="news-card"><div class="news-date">01.06.2026</div><h3>Tensor VPN теперь на Android TV</h3><p>Выпустили приложение для телевизоров. Смотри YouTube на большом экране без танцев с бубном.</p><span class="news-tag">Релиз</span></div>
+                    <div class="news-card"><div class="news-date">28.05.2026</div><h3>Обновление протокола WireGuard</h3><p>Перешли на новую версию WireGuard. Шифрование стало ещё быстрее, а расход батареи на телефоне снизился на 15%.</p><span class="news-tag">Технологии</span></div>
+                    <div class="news-card"><div class="news-date">20.05.2026</div><h3>Реферальная программа: первые 100 участников</h3><p>Запустили рефералку — уже 100 человек получили бесплатные минуты Pro за приглашённых друзей. Присоединяйся!</p><span class="news-tag">Акции</span></div>
+                    <div class="news-card"><div class="news-date">15.05.2026</div><h3>Tensor VPN на Хабре: статья про No Logs</h3><p>Написали подробный разбор, почему мы не храним логи и как это проверено технически. Читайте на Хабре.</p><span class="news-tag">СМИ</span></div>
                 </div>
             </div>
         </section>
@@ -853,62 +785,10 @@
                 <div class="section-label">Тарифы</div>
                 <div class="section-title">Дешевле кофе,<br>быстрее света</div>
                 <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <h3>🚀 Free</h3>
-                        <div class="price">0 ₽<span>/мес</span></div>
-                        <div class="price-sub">Ознакомительный режим</div>
-                        <ul>
-                            <li>500 МБ трафика в день</li>
-                            <li>1 устройство</li>
-                            <li>Базовые сервисы</li>
-                            <li>Стандартная скорость</li>
-                            <li>Поддержка в Telegram</li>
-                        </ul>
-                        <a class="btn btn-outline" onclick="openAuth('reg')">Начать бесплатно</a>
-                    </div>
-                    <div class="pricing-card">
-                        <h3>💜 Lite</h3>
-                        <div class="price">149 ₽<span>/мес</span></div>
-                        <div class="price-sub">Для повседневного использования</div>
-                        <ul>
-                            <li>Безлимитный трафик</li>
-                            <li>1 устройство</li>
-                            <li>YouTube, Telegram, TikTok и другие сервисы, заблокированные в России</li>
-                            <li>Высокая скорость</li>
-                            <li>Приоритетная поддержка</li>
-                        </ul>
-                        <a class="btn btn-outline" onclick="openAuth('reg')">Выбрать Lite</a>
-                    </div>
-                    <div class="pricing-card popular">
-                        <div class="popular-badge">🔥 Самый выгодный</div>
-                        <h3>👑 Pro</h3>
-                        <div class="price">199 ₽<span>/мес</span></div>
-                        <div class="price-sub">Максимум возможностей</div>
-                        <ul>
-                            <li>Безлимитный трафик</li>
-                            <li>До 5 устройств</li>
-                            <li>YouTube, Telegram, TikTok и другие сервисы, заблокированные в России</li>
-                            <li>ChatGPT и нейросети без ограничений</li>
-                            <li>Максимальная скорость</li>
-                            <li>VIP-поддержка 24/7</li>
-                            <li>Реферальный бонус ×2</li>
-                        </ul>
-                        <a class="btn btn-primary" onclick="openAuth('reg')">Выбрать Pro 🔥</a>
-                    </div>
-                    <div class="pricing-card">
-                        <h3>💎 Pro Год</h3>
-                        <div class="price">1 490 ₽<span>/год</span></div>
-                        <div class="price-sub">Экономия 35% — как 124 ₽/мес</div>
-                        <ul>
-                            <li>Всё из Pro-тарифа</li>
-                            <li>До 5 устройств</li>
-                            <li>YouTube, Telegram, TikTok и другие сервисы, заблокированные в России</li>
-                            <li>ChatGPT без ограничений</li>
-                            <li>Защита на целый год</li>
-                            <li>Гарантия возврата 7 дней</li>
-                        </ul>
-                        <a class="btn btn-outline" onclick="openAuth('reg')">Выбрать Годовой</a>
-                    </div>
+                    <div class="pricing-card"><h3>🚀 Free</h3><div class="price">0 ₽<span>/мес</span></div><div class="price-sub">Ознакомительный режим</div><ul><li>500 МБ трафика в день</li><li>1 устройство</li><li>Базовые сервисы</li><li>Стандартная скорость</li><li>Поддержка в Telegram</li></ul><a class="btn btn-outline" onclick="openAuth('reg')">Начать бесплатно</a></div>
+                    <div class="pricing-card"><h3>💜 Lite</h3><div class="price">149 ₽<span>/мес</span></div><div class="price-sub">Для повседневного использования</div><ul><li>Безлимитный трафик</li><li>1 устройство</li><li>YouTube, Telegram, TikTok и другие сервисы, заблокированные в России</li><li>Высокая скорость</li><li>Приоритетная поддержка</li></ul><a class="btn btn-outline" onclick="openAuth('reg')">Выбрать Lite</a></div>
+                    <div class="pricing-card popular"><div class="popular-badge">🔥 Самый выгодный</div><h3>👑 Pro</h3><div class="price">199 ₽<span>/мес</span></div><div class="price-sub">Максимум возможностей</div><ul><li>Безлимитный трафик</li><li>До 5 устройств</li><li>YouTube, Telegram, TikTok и другие сервисы, заблокированные в России</li><li>ChatGPT и нейросети без ограничений</li><li>Максимальная скорость</li><li>VIP-поддержка 24/7</li><li>Реферальный бонус ×2</li></ul><a class="btn btn-primary" onclick="openAuth('reg')">Выбрать Pro 🔥</a></div>
+                    <div class="pricing-card"><h3>💎 Pro Год</h3><div class="price">1 490 ₽<span>/год</span></div><div class="price-sub">Экономия 35% — как 124 ₽/мес</div><ul><li>Всё из Pro-тарифа</li><li>До 5 устройств</li><li>YouTube, Telegram, TikTok и другие сервисы, заблокированные в России</li><li>ChatGPT без ограничений</li><li>Защита на целый год</li><li>Гарантия возврата 7 дней</li></ul><a class="btn btn-outline" onclick="openAuth('reg')">Выбрать Годовой</a></div>
                 </div>
             </div>
         </section>
@@ -922,34 +802,24 @@
                 <div class="section-title">Tensor против других</div>
                 <div style="overflow-x: auto;">
                     <table class="compare-table">
-                        <thead>
-                            <tr>
-                                <th>Критерий</th>
-                                <th>Бесплатные VPN</th>
-                                <th>Дорогие VPN</th>
-                                <th style="color: var(--primary-glow);">Tensor VPN</th>
-                            </tr>
-                        </thead>
+                        <thead><tr><th>Критерий</th><th>Бесплатные VPN</th><th>Дорогие VPN</th><th style="color: var(--primary-glow);">Tensor VPN</th></tr></thead>
                         <tbody>
-                            <tr>
-                                <td>Цена</td>
-                                <td>0 ₽ (но вы товар)</td>
-                                <td class="cross">400–600 ₽/мес</td>
-                                <td class="check">99–199 ₽/мес</td>
-                            </tr>
-                            <tr>
-                                <td>Логирование</td>
-                                <td class="cross">Продают данные</td>
-                                <td class="cross">Не всегда честны</td>
-                                <td class="check">No Logs. 100%</td>
-                            </tr>
-                            <tr>
-                                <td>Реклама</td>
-                                <td class="cross">Баннеры и всплывашки</td>
-                                <td class="check">Нет</td>
-                                <td class="check">Нет</td>
-                            </tr>
-                            <tr>
-                                <td>Скорость</td>
-                                <td class="cross">Ограничена</td>
-                                <td class
+                            <tr><td>Цена</td><td>0 ₽ (но вы товар)</td><td class="cross">400–600 ₽/мес</td><td class="check">99–199 ₽/мес</td></tr>
+                            <tr><td>Логирование</td><td class="cross">Продают данные</td><td class="cross">Не всегда честны</td><td class="check">No Logs. 100%</td></tr>
+                            <tr><td>Реклама</td><td class="cross">Баннеры и всплывашки</td><td class="check">Нет</td><td class="check">Нет</td></tr>
+                            <tr><td>Скорость</td><td class="cross">Ограничена</td><td class="check">Высокая</td><td class="check">Максимальная</td></tr>
+                            <tr><td>ChatGPT</td><td class="cross">Заблокирован</td><td class="check">Работает</td><td class="check">Работает</td></tr>
+                            <tr><td>Устройства</td><td>1</td><td>До 10</td><td class="check">До 5 (Pro)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-card">
+                <h2>Готов загрузить свободу? 🚀</h2>
+                <p>Подключи Tensor VPN за 2 минуты. Без логов, без рекламы, без тормозов.</p
