@@ -681,13 +681,12 @@
     <div class="bg-glow bg-glow-2"></div>
     <div class="bg-glow bg-glow-3"></div>
 
-    <!-- Auth Modal -->
     <div class="modal-overlay" id="authModal">
         <div class="modal">
             <button class="modal-close" onclick="closeAuth()">✕</button>
             <h2 id="modalTitle">Войти</h2>
             <p class="sub" id="modalSub">Добро пожаловать обратно</p>
-            <form id="authForm" onsubmit="handleAuth(event)">
+            <form id="authForm" onsubmit="return handleAuth(event)">
                 <div class="form-group" id="nameGroup" style="display:none;">
                     <label>Имя</label>
                     <input type="text" id="regName" placeholder="Как тебя зовут?" autocomplete="off">
@@ -700,7 +699,7 @@
                     <label>Пароль</label>
                     <input type="password" id="authPassword" placeholder="Минимум 6 символов" required minlength="6" autocomplete="off">
                 </div>
-                <p class="error-msg" id="authError">Неверный email или пароль</p>
+                <p class="error-msg" id="authError"></p>
                 <button type="submit" class="btn btn-primary" id="authSubmitBtn">Войти</button>
             </form>
             <p class="switch" id="switchText">
@@ -709,7 +708,6 @@
         </div>
     </div>
 
-    <!-- Header -->
     <header>
         <div class="container">
             <div class="logo" onclick="navigateTo('home')">
@@ -731,7 +729,6 @@
         </div>
     </header>
 
-    <!-- Главная -->
     <div class="page active" id="page-home">
         <section class="hero">
             <div class="container">
@@ -760,7 +757,6 @@
         </section>
     </div>
 
-    <!-- Новости -->
     <div class="page" id="page-news">
         <section class="news">
             <div class="container">
@@ -778,7 +774,6 @@
         </section>
     </div>
 
-    <!-- Тарифы -->
     <div class="page" id="page-pricing">
         <section class="pricing">
             <div class="container">
@@ -794,7 +789,6 @@
         </section>
     </div>
 
-    <!-- Сравнение -->
     <div class="page" id="page-compare">
         <section class="compare">
             <div class="container">
@@ -806,7 +800,7 @@
                         <tbody>
                             <tr><td>Цена</td><td>0 ₽ (но вы товар)</td><td class="cross">400–600 ₽/мес</td><td class="check">99–199 ₽/мес</td></tr>
                             <tr><td>Логирование</td><td class="cross">Продают данные</td><td class="cross">Не всегда честны</td><td class="check">No Logs. 100%</td></tr>
-                            <tr><td>Реклама</td><td class="cross">Баннеры и всплывашки</td><td class="check">Нет</td><td class="check">Нет</td></tr>
+                            <tr><td>Реклама</td><td class="cross">Баннеры</td><td class="check">Нет</td><td class="check">Нет</td></tr>
                             <tr><td>Скорость</td><td class="cross">Ограничена</td><td class="check">Высокая</td><td class="check">Максимальная</td></tr>
                             <tr><td>ChatGPT</td><td class="cross">Заблокирован</td><td class="check">Работает</td><td class="check">Работает</td></tr>
                             <tr><td>Устройства</td><td>1</td><td>До 10</td><td class="check">До 5 (Pro)</td></tr>
@@ -817,9 +811,4 @@
         </section>
     </div>
 
-    <!-- CTA -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-card">
-                <h2>Готов загрузить свободу? 🚀</h2>
-                <p>Подключи Tensor VPN за 2 минуты. Без логов, без рекламы, без тормозов.</p
+    <
